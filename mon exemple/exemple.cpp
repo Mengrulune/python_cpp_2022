@@ -16,7 +16,7 @@ private:
     int mJ;
 };
 
-PYBIND11_MODULE( py2cpp, m ){
+PYBIND11_MODULE(exemple, m){
     m.doc() = "mon example";
     pybind11::class_<Test>(m, "Test" )
         .def( pybind11::init< int , int >() )
