@@ -82,9 +82,9 @@ class Cle
  
 namespace py = pybind11;
 
-PYBIND11_MODULE(Key)
+PYBIND11_MODULE(Key,k)
 {
-  py::class_<Cle>("Cle", py::dynamic_attr())
+  py::class_<Cle>(k,"Cle", py::dynamic_attr())
         .def(py::init())
         .def("initialize", &Cle::initialize)
         .def("getPrivateKey", &Cle::getPrivateKey)
